@@ -1,9 +1,10 @@
+package br.com.monteiro.mymusics.models;
+
 public class Audio {
     private String title;
-    private int durationTime;
     private int totalReproductions;
-    private int likes;
-    private int Review;
+    private int totalLikes;
+    private int review;
 
 
     // Getters and Setters
@@ -15,13 +16,6 @@ public class Audio {
         this.title = title;
     }
 
-    public int getDurationTime() {
-        return durationTime;
-    }
-
-    public void setDurationTime(int durationTime) {
-        this.durationTime = durationTime;
-    }
 
     public int getTotalReproductions() {
         return totalReproductions;
@@ -31,19 +25,29 @@ public class Audio {
         this.totalReproductions = totalReproductions;
     }
 
-    public int getLikes() {
-        return likes;
+    public int getTotalLikes() {
+        return totalLikes;
     }
 
-    public void setLikes(int likes) {
-        this.likes = likes;
+    public void setTotalLikes(int likes) {
+        this.totalLikes = likes;
     }
 
     public int getReview() {
-        return Review;
+        return review;
     }
 
     public void setReview(int review) {
-        Review = review;
+        this.review = review;
+    }
+
+    // Methods
+
+    public void like () {
+        this.totalLikes++;
+    }
+
+    public void reproduce () {
+        this.totalReproductions++;
     }
 }
